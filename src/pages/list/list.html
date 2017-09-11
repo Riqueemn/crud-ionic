@@ -1,0 +1,35 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Listas de Pessoas</ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only color="danger" (click)="dismiss()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label floating>Nome</ion-label>
+    <ion-input type="text" [(ngModel)]="listaDePessoas.nome"></ion-input>
+  </ion-item>
+
+
+    <ion-item>
+      <ion-label floating>Idade</ion-label>
+      <ion-input type="number" [(ngModel)]="listaDePessoas.idade"></ion-input>
+    </ion-item>
+
+
+     <input type="file" (change)="upload($event)"/>
+
+    <button ion-button color="danger" (click)="adicionarPessoas(listaDePessoas)">Adicionar</button>
+
+</ion-content>

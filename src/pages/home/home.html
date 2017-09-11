@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Crud com Firebase
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button color="danger" full (click)="listmodal()">Adicionar pessoas</button>
+
+  <ion-list> 
+    <ion-item class="item" *ngFor="let item of bancoPessoas | async" (click)="edit(item)">
+      <h1>Nome: {{item.nome}}</h1>
+      <h2>Idade: {{item.idade}}</h2>
+      <ion-buttons end>
+        <button ion-button icon-only color="danger" (click)="remover(item)">
+          <ion-icon name="md-close"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-item>
+    
+    <ion-item class="item" *ngFor="let item of bancoPessoas | async" (click)="edit(item)">
+      
+    </ion-item> 
+    </ion-list>
+</ion-content>
